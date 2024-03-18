@@ -1,5 +1,7 @@
 var greet = require('./greet');
 
+var util = require('util');
+
 greet.english("Madam");
 greet.spanish("Senorita");
 
@@ -12,3 +14,6 @@ greet.spanish("Senorita");
 //     }
 // };
 
+var myName = 'Sagar';
+var greeting = util.format('Hello, %s', myName);
+util.log(greeting);
