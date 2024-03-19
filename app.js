@@ -17,3 +17,19 @@ greet.spanish("Senorita");
 var myName = 'Sagar';
 var greeting = util.format('Hello, %s', myName);
 util.log(greeting);
+
+var Emitter = require('./emitter');
+
+emtr = new Emitter();
+
+emtr.on('greet', function() {
+    console.log('Greet1');
+});
+
+emtr.on('greet', function() {
+    console.log('Greet2 !!');
+});
+
+console.log('test \n');
+
+emtr.emit('greet');
